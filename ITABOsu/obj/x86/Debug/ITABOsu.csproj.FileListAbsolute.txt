@@ -1,0 +1,30 @@
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\bin\x86\Debug\ITABOsu.exe.config
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\bin\x86\Debug\ITABOsu.exe
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\bin\x86\Debug\ITABOsu.pdb
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\bin\x86\Debug\Bridge.dll
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\bin\x86\Debug\Bridge.pdb
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.csprojResolveAssemblyReference.cache
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\x86\Debug\MainWindow.baml
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\x86\Debug\MainWindow.g.cs
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\x86\Debug\App.g.cs
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu_MarkupCompile.cache
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.g.resources
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.Properties.Resources.resources
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.csproj.GenerateResource.Cache
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.exe
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.pdb
+A:\Projects\C++\TABOsu\ITABOsu\bin\x86\Debug\ITABOsu.exe.config
+A:\Projects\C++\TABOsu\ITABOsu\bin\x86\Debug\ITABOsu.exe
+A:\Projects\C++\TABOsu\ITABOsu\bin\x86\Debug\ITABOsu.pdb
+A:\Projects\C++\TABOsu\ITABOsu\bin\x86\Debug\Bridge.dll
+A:\Projects\C++\TABOsu\ITABOsu\bin\x86\Debug\Bridge.pdb
+A:\Projects\C++\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.csprojResolveAssemblyReference.cache
+A:\Projects\C++\TABOsu\ITABOsu\obj\x86\Debug\MainWindow.baml
+A:\Projects\C++\TABOsu\ITABOsu\obj\x86\Debug\MainWindow.g.cs
+A:\Projects\C++\TABOsu\ITABOsu\obj\x86\Debug\App.g.cs
+A:\Projects\C++\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu_MarkupCompile.cache
+A:\Projects\C++\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.g.resources
+A:\Projects\C++\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.Properties.Resources.resources
+A:\Projects\C++\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.csproj.GenerateResource.Cache
+A:\Projects\C++\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.exe
+A:\Projects\C++\TABOsu\ITABOsu\obj\x86\Debug\ITABOsu.pdb

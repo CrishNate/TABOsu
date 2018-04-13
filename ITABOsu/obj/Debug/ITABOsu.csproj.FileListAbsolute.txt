@@ -1,0 +1,12 @@
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\bin\Debug\ITABOsu.exe.config
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\bin\Debug\ITABOsu.exe
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\bin\Debug\ITABOsu.pdb
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\Debug\MainWindow.baml
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\Debug\MainWindow.g.cs
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\Debug\App.g.cs
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\Debug\ITABOsu_MarkupCompile.cache
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\Debug\ITABOsu.g.resources
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\Debug\ITABOsu.Properties.Resources.resources
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\Debug\ITABOsu.csproj.GenerateResource.Cache
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\Debug\ITABOsu.exe
+c:\users\someone\documents\visual studio 2013\Projects\TABOsu\ITABOsu\obj\Debug\ITABOsu.pdb
