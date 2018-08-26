@@ -32,15 +32,6 @@ namespace Bridge {
 		m_pCTABOsu->StopBot();
 	}
 
-
-	void TABOsuBridge::SetOsuPathWrapper(String^ path)
-	{
-		std::wstring nativePath
-			= msclr::interop::marshal_as<std::wstring>(path);
-		m_pCTABOsu->SetOsuPath(nativePath);
-	}
-
-
 	bool TABOsuBridge::LoadSongWrapper(String^ path)
 	{
 		std::wstring nativePath
@@ -49,21 +40,33 @@ namespace Bridge {
 		return m_pCTABOsu->LoadSong(nativePath);
 	}
 
+	void TABOsuBridge::SetCursorDanceMode(bool cursorDance)
+	{
+		m_pCTABOsu->SetCursorDance(cursorDance);
+	}
 
 	void TABOsuBridge::SetAutoHitWrapper(bool autoHit)
 	{
 		m_pCTABOsu->SetAutoHit(autoHit);
 	}
 
-
 	void TABOsuBridge::SetAutoAimWrapper(bool autoAim)
 	{
 		m_pCTABOsu->SetAutoAim(autoAim);
 	}
 
-
 	void TABOsuBridge::SetAutoSpinWrapper(bool autoSpin)
 	{
 		m_pCTABOsu->SetAutoSpin(autoSpin);
+	}
+
+	void TABOsuBridge::SetAimAccuracyWrapper(double aimAccuracy)
+	{
+		m_pCTABOsu->SetAimAccuracy(aimAccuracy);
+	}
+
+	void TABOsuBridge::SetHitAccuracyWrapper(double hitAccuracy)
+	{
+		m_pCTABOsu->SetHitAccuracy(hitAccuracy);
 	}
 }

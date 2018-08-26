@@ -58,6 +58,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <DelayLoadDLLs>TABOsu.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
     <PostBuildEvent>
       <Command>call "$(ProjectDir)..\ITABOsu\copy.bat"</Command>
@@ -87,15 +88,19 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="autoco.h" />
     <ClInclude Include="BezierApproximator.h" />
+    <ClInclude Include="CatmullApproximator.h" />
     <ClInclude Include="CircularArcApproximator.h" />
     <ClInclude Include="HitCircle.h" />
     <ClInclude Include="inputControll.h" />
+    <ClInclude Include="MapParser.h" />
     <ClInclude Include="math.h" />
     <ClInclude Include="ntinfo.h" />
     <ClInclude Include="OsuEntity.h" />
     <ClInclude Include="OsuHandler.h" />
     <ClInclude Include="Slider.h" />
+    <ClInclude Include="SliderPath.h" />
     <ClInclude Include="Spinner.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="TABOsu.h" />
@@ -103,6 +108,7 @@
     <ClInclude Include="ThReadStack.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="autoco.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -112,6 +118,7 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="HitCircle.cpp" />
+    <ClCompile Include="MapParser.cpp" />
     <ClCompile Include="ntinfo.cpp" />
     <ClCompile Include="OsuHandler.cpp" />
     <ClCompile Include="Slider.cpp" />

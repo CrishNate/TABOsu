@@ -17,11 +17,14 @@ namespace Bridge {
 		void StartBotWrapper();
 		void StopBotWrapper();
 
+		void SetCursorDanceMode(bool cursorDance);
 		void SetAutoHitWrapper(bool autoHit);
 		void SetAutoAimWrapper(bool autoAim);
 		void SetAutoSpinWrapper(bool autoSpin);
 
-		void SetOsuPathWrapper(String^ path);
+		void SetAimAccuracyWrapper(double aimAccuracy);
+		void SetHitAccuracyWrapper(double hitAccuracy);
+
 		bool LoadSongWrapper(String^ path);
 
 	private:

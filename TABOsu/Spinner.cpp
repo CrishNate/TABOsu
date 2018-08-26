@@ -1,19 +1,14 @@
 #include "stdafx.h"
 #include "Spinner.h"
 
-Vector2D Spinner::GetCursorMove(time_t tick, time_t lastTime, Vector2D lastPos, RECT winTrans)
+Vector2D Spinner::GetPosition(time_t tick)
 {
-	if (tick > m_StartTime)
-	{
-		float radius = 50.0f;
-		Vector2D point = m_Point + Vector2D(cos(tick / 20.0f), sin(tick / 20.0f)) * radius;
-	}
-	else
-	{
-		float offset = (m_StartTime - lastTime) < 100 ? 0 : 50;
-		float hitCircleTime = fmin(1000, static_cast<float>((m_StartTime - offset) - lastTime));
-		float koef = static_cast<float>(tick - lastTime) / hitCircleTime;
+	float dTime = (tick - m_LastTime);
+	m_LastTime = tick;
 
-		return lastPos + (m_Point - lastPos) * fmin(1, koef);
-	}
+	float radius = 50.0f + cos(m_Rotation) * sin(1.1 * m_Rotation) * 20.0f;
+	Vector2D point = m_Point + Vector2D(cos(m_Rotation), sin(m_Rotation)) * radius;
+	m_Rotation += dTime * Random(1.0f, 1.1f) / 20.0f;
+
+	return point;
 }

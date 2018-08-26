@@ -3,16 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Tool Asisstance Bot Osu" Height="411.8" Width="533" Closed="TABOsuWindow_Closed" ResizeMode="NoResize">
     <Grid RenderTransformOrigin="0.5,0.5" Margin="0">
-        <Label x:Name="IsBotActiveLabel" Content="Bot Active: false" HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Height="26" Width="157" Foreground="Red"/>
-        <CheckBox x:Name="BotRelaxButton" Content="Relax" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="91" Checked="BotRelaxButton_Checked"/>
-        <CheckBox x:Name="BotAimButton" Content="Aim" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="91" Checked="BotAimButton_Checked"/>
+        <Label x:Name="IsBotActiveLabel" Content="Bot Active: false" HorizontalAlignment="Left" Margin="10,294,0,0" VerticalAlignment="Top" Height="26" Width="157" Foreground="Gray"/>
+        <CheckBox x:Name="BotRelaxButton" Content="Relax" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" Width="91" Click="BotRelaxButton_Checked"/>
+        <CheckBox x:Name="BotAimButton" Content="Aim" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="91" Click="BotAimButton_Checked"/>
         <Canvas HorizontalAlignment="Left" Height="62" Margin="10,102,0,0" VerticalAlignment="Top" Width="205">
-            <TextBlock x:Name="BotHitAccuracyLabel" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="16" Text="Hit accuracy 0%" Canvas.Left="10" Canvas.Top="10"/>
-            <Slider x:Name="BotHitAccuracy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Canvas.Left="10" Canvas.Top="31"/>
+            <TextBlock x:Name="BotHitAccuracyLabel" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="16" Canvas.Left="10" Canvas.Top="10"><Run Text="Hit accuracy 100"/><LineBreak/><Run Text="%"/></TextBlock>
+            <Slider x:Name="BotHitAccuracy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Canvas.Left="10" Canvas.Top="31" ValueChanged="BotHitAccuracy_ValueChanged" Maximum="100" Value="100"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="62" Margin="10,169,0,0" VerticalAlignment="Top" Width="205">
-            <TextBlock x:Name="BotAimAccuracyLabel" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="16" Text="Aim accuracy 0%" Canvas.Left="10" Canvas.Top="10"/>
-            <Slider x:Name="BotAimAccuracy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Canvas.Left="10" Canvas.Top="31"/>
+            <TextBlock x:Name="BotAimAccuracyLabel" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Height="16" Canvas.Left="10" Canvas.Top="10"><Run Text="Aim accuracy 100"/><LineBreak/><Run Text="%"/></TextBlock>
+            <Slider x:Name="BotAimAccuracy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Canvas.Left="10" Canvas.Top="31" Maximum="100" Value="100" ValueChanged="BotAimAccuracy_ValueChanged"/>
         </Canvas>
         <TextBox x:Name="pathLabel" HorizontalAlignment="Left" Height="23" Margin="220,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Text="path to osu!"/>
         <TreeView x:Name="SongViewer" HorizontalAlignment="Left" Height="304" Margin="220,41,0,0" VerticalAlignment="Top" Width="288" SelectedItemChanged="SongViewer_SelectedItemChanged"/>
@@ -22,6 +22,7 @@
         <CheckBox x:Name="HardButton" Content="Hard" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" Width="91"/>
         <Label x:Name="IsOsuRunningLabel" Content="Osu is Running: false" HorizontalAlignment="Left" Margin="10,320,0,0" VerticalAlignment="Top" Height="26" Width="157" Foreground="Red"/>
         <Label x:Name="IsMapLoadedLabel" Content="Map Loaded: false" HorizontalAlignment="Left" Margin="10,346,0,0" VerticalAlignment="Top" Height="26" Width="157" Foreground="Red"/>
-        <CheckBox x:Name="BotSpinAutomatic" Content="Auto Spin" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Width="91" Checked="BotSpinAutomatic_Checked"/>
+        <CheckBox x:Name="BotSpinAutomatic" Content="Auto Spin" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Width="91" Click="BotSpinAutomatic_Checked"/>
+        <CheckBox x:Name="BotCursorDanceCheckbox" Content="Cursor Dance" HorizontalAlignment="Left" Margin="106,14,0,0" VerticalAlignment="Top" Width="100" Click="BotCursorDanceCheckbox_Checked"/>
     </Grid>
 </Window>

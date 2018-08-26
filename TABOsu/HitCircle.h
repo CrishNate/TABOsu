@@ -9,7 +9,7 @@ public:
 		: OsuEntity(point, startTime, endTime)
 	{ }
 
-	Vector2D GetCursorMove(time_t tick, time_t lastTime, Vector2D lastPos);
+	Vector2D GetPosition(time_t tick);
 	virtual OsuEntityType GetType() { return OsuEntityType::OET_HitCircle; }
 
 private:

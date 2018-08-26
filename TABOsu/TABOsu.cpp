@@ -6,6 +6,7 @@
 #include <fstream>
 #include <tlhelp32.h>
 
+#define THEREADSTACKOFFSET 0x32C
 // This is an example of an exported variable
 TABOSU_API int nTABOsu=0;
 
@@ -66,7 +67,7 @@ bool CTABOsu::SetupOsuInfo()
 		m_HWND = FindMainWindow(dwProcID);
 		m_hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, dwProcID);
 		thReadStackBase = m_pThreadReadStack->GetThReadStack(m_hProcess, dwProcID);
-		ReadProcessMemory(m_hProcess, (LPCVOID)(thReadStackBase - 0x32C), &m_dwReadStackBase, sizeof(DWORD), NULL);
+		ReadProcessMemory(m_hProcess, (LPCVOID)(thReadStackBase - THEREADSTACKOFFSET), &m_dwReadStackBase, sizeof(DWORD), NULL);
 
 		if (dwProcID)
 			return true;
@@ -86,15 +87,15 @@ void CTABOsu::StopBot()
 }
 
 
-void CTABOsu::SetOsuPath(const std::wstring& path)
+bool CTABOsu::LoadSong(const std::wstring& path)
 {
-	m_pOsuHander->SetOsuPath(path);
+	return m_pOsuHander->GetMapParser()->LoadSong(path);
 }
 
 
-bool CTABOsu::LoadSong(const std::wstring& path)
+void CTABOsu::SetCursorDance(bool cursorDance)
 {
-	return m_pOsuHander->LoadSong(path);
+	m_pOsuHander->SetCursorDanceMode(cursorDance);
 }
 
 
@@ -113,4 +114,16 @@ void CTABOsu::SetAutoAim(bool autoAim)
 void CTABOsu::SetAutoSpin(bool autoSpin)
 {
 	m_pOsuHander->SetAutoSpin(autoSpin);
+}
+
+
+void CTABOsu::SetAimAccuracy(float aimAccuracy)
+{
+
+}
+
+
+void CTABOsu::SetHitAccuracy(float hitAccuracy)
+{
+
 }

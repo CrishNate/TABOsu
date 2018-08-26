@@ -1,5 +1,5 @@
-﻿Build started 4/13/2018 4:56:52 PM.
-     1>Project "A:\Projects\C++\TABOsu\TABOsu\TABOsu.vcxproj" on node 2 (Build target(s)).
+﻿Сборка начата 8/24/2018 11:40:24 PM.
+     1>Проект "A:\Projects\C++\TABOsu\TABOsu\TABOsu.vcxproj" в узле 2 (целевые объекты Build).
      1>PreBuildEvent:
          call "A:\Projects\C++\TABOsu\TABOsu\..\ITABOsu\copy.bat"
          :VCEnd
@@ -12,16 +12,31 @@
          0 File(s) copied
          0 File(s) copied
        ClCompile:
-         A:\Programs\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl- /Od /Oy- /D WIN32 /D WIN32_CLIENT /D _DEBUG /D _WINDOWS /D _USRDLL /D TABOSU_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\TABOsu.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt OsuHandler.cpp
+         A:\Programs\Microsoft Visual Studio 13.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl- /Od /Oy- /D WIN32 /D WIN32_CLIENT /D _DEBUG /D _WINDOWS /D _USRDLL /D TABOSU_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\TABOsu.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt OsuHandler.cpp
          OsuHandler.cpp
-     1>OsuHandler.cpp(154): warning C4244: 'initializing' : conversion from '_Longlong' to 'int32_t', possible loss of data
-     1>OsuHandler.cpp(157): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>OsuHandler.cpp(195): warning C4018: '<' : signed/unsigned mismatch
-     1>OsuHandler.cpp(198): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>OsuHandler.cpp(457): warning C4244: 'argument' : conversion from 'float' to 'uint16_t', possible loss of data
+     1>a:\projects\c++\tabosu\tabosu\autoco.h(19): warning C4244: аргумент: преобразование "LONG" в "float", возможна потеря данных
+     1>a:\projects\c++\tabosu\tabosu\autoco.h(27): warning C4244: аргумент: преобразование "LONG" в "float", возможна потеря данных
+     1>a:\projects\c++\tabosu\tabosu\CircularArcApproximator.h(79): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+     1>a:\projects\c++\tabosu\tabosu\CircularArcApproximator.h(79): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+     1>a:\projects\c++\tabosu\tabosu\BezierApproximator.h(20): warning C4018: <: несоответствие типов со знаком и без знака
+     1>a:\projects\c++\tabosu\tabosu\BezierApproximator.h(66): warning C4018: <: несоответствие типов со знаком и без знака
+     1>a:\projects\c++\tabosu\tabosu\BezierApproximator.h(144): warning C4018: <: несоответствие типов со знаком и без знака
+     1>a:\projects\c++\tabosu\tabosu\SliderPath.h(37): warning C4244: инициализация: преобразование "float" в "uint32_t", возможна потеря данных
+     1>a:\projects\c++\tabosu\tabosu\SliderPath.h(105): warning C4244: инициализация: преобразование "float" в "uint32_t", возможна потеря данных
+     1>a:\projects\c++\tabosu\tabosu\CatmullApproximator.h(28): warning C4018: <: несоответствие типов со знаком и без знака
+     1>a:\projects\c++\tabosu\tabosu\CatmullApproximator.h(32): warning C4018: <: несоответствие типов со знаком и без знака
+     1>a:\projects\c++\tabosu\tabosu\CatmullApproximator.h(33): warning C4018: <: несоответствие типов со знаком и без знака
+     1>OsuHandler.cpp(101): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+     1>OsuHandler.cpp(102): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+     1>OsuHandler.cpp(115): warning C4244: инициализация: преобразование "float" в "LONG", возможна потеря данных
+     1>OsuHandler.cpp(149): warning C4244: =: преобразование "float" в "time_t", возможна потеря данных
+     1>OsuHandler.cpp(158): warning C4244: инициализация: преобразование "time_t" в "float", возможна потеря данных
+     1>OsuHandler.cpp(233): warning C4244: аргумент: преобразование "float" в "uint16_t", возможна потеря данных
        Link:
-         A:\Programs\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"A:\Projects\C++\TABOsu\Debug\TABOsu.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"A:\Projects\C++\TABOsu\Debug\TABOsu.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"A:\Projects\C++\TABOsu\Debug\TABOsu.lib" /MACHINE:X86 /DLL Debug\dllmain.obj
+         A:\Programs\Microsoft Visual Studio 13.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"A:\Projects\C++\TABOsu\Debug\TABOsu.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Delayimp.lib /DELAYLOAD:TABOsu.dll /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"A:\Projects\C++\TABOsu\Debug\TABOsu.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"A:\Projects\C++\TABOsu\Debug\TABOsu.lib" /MACHINE:X86 /DLL Debug\autoco.obj
+         Debug\dllmain.obj
          Debug\HitCircle.obj
+         Debug\MapParser.obj
          Debug\ntinfo.obj
          Debug\OsuHandler.obj
          Debug\Slider.obj
@@ -43,8 +58,8 @@
          0 File(s) copied
          0 File(s) copied
          0 File(s) copied
-     1>Done Building Project "A:\Projects\C++\TABOsu\TABOsu\TABOsu.vcxproj" (Build target(s)).
+     1>Сборка проекта "A:\Projects\C++\TABOsu\TABOsu\TABOsu.vcxproj" завершена (целевые объекты Build).
 
-Build succeeded.
+Сборка успешно завершена.
 
-Time Elapsed 00:00:04.94
+Затраченное время: 00:00:01.13

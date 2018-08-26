@@ -1,20 +1,5 @@
 #include "OsuEntity.h"
-
-enum SliderType
-{
-	ST_None = 0,
-	ST_Linear = 1,
-	ST_Bezire = 2,
-	ST_Perfect = 3,
-	ST_Catmull = 4,
-};
-
-const static std::unordered_map<char, SliderType> charToSliderType = {
-	{ 'L', SliderType::ST_Linear },
-	{ 'P', SliderType::ST_Perfect },
-	{ 'B', SliderType::ST_Bezire },
-	{ 'C', SliderType::ST_Catmull }
-};
+#include "SliderPath.h"
 
 class Slider
 	: public OsuEntity
@@ -29,11 +14,13 @@ public:
 		, m_PixelLength(pixelLength)
 	{ }
 
-	Vector2D GetSliderPosition(time_t time);
-	Vector2D GetCursorMove(time_t tick, time_t lastTime, Vector2D lastPos);
+	Vector2D GetPosition(time_t tick);
+	uint32_t PathLengthRemain(time_t tick);
 	virtual OsuEntityType GetType() { return OsuEntityType::OET_Slider; }
 
 private:
+
+	Vector2D GetSliderPosition(time_t time);
 
 	uint16_t m_Repeat;
 	uint32_t m_PixelLength;

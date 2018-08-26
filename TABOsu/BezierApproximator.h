@@ -4,6 +4,29 @@
 #include <vector>
 #include <stack>
 
+static uint32_t factorial(uint32_t n)
+{
+	return (n <= 1) ? 1 : factorial(n - 1) * n;
+}
+
+static Vector2D SimpleBezireCurve(Vector2D start, Vector2D middle, Vector2D end, float t)
+{
+	Vector2D p = { 0, 0 };
+	std::vector<Vector2D> pts = { start, middle, end };
+	int n = pts.size() - 1;
+
+	t = max(0, min(1, t));
+
+	for (int i = 0; i < pts.size(); i++) 
+	{
+		float b = (factorial(n) / (factorial(i) * factorial(n - i))) * std::pow(t, i) * std::pow(1 - t, n - i);
+
+		p.x += pts[i].x * b;
+		p.y += pts[i].y * b;
+	}
+	return p;
+}
+
 class BezierApproximator
 {
 public:
@@ -12,7 +35,7 @@ public:
 	Vector2D* subdivisionBuffer1;
 	Vector2D* subdivisionBuffer2;
 
-	const float tolerance = 0.25f;
+	const float tolerance = 0.001f;
 	const float tolerance_sq = tolerance * tolerance;
 
 	BezierApproximator(const std::vector<Vector2D>& controlPoints)

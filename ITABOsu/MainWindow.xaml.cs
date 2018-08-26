@@ -31,9 +31,12 @@ namespace ITABOsu
         private KeyboardListener kListener = new KeyboardListener();
         private TABOsuBridge mainTABOsuCore = new TABOsuBridge();
 
+        private bool isMapLoaded;
         private bool botActivated;
         private bool osuIsRunning;
         private bool bindActivateEdit;
+        private bool cursorDance;
+
         private Key bindedActivationButton;
 
         public MainWindow()
@@ -48,8 +51,9 @@ namespace ITABOsu
 
             kListener.KeyDown += new RawKeyEventHandler(KListener_KeyDown);
 
-            mainTABOsuCore.SetOsuPathWrapper("A:\\Games\\osu!");
             ListDirectory(SongViewer, "A:\\Games\\osu!\\Songs");
+            mainTABOsuCore.SetHitAccuracyWrapper(100.0f);
+            mainTABOsuCore.SetAimAccuracyWrapper(100.0f);
         }
 
         void CheckForOsuRunning()
@@ -73,7 +77,7 @@ namespace ITABOsu
                 bindedActivationButton = args.Key;
                 bindActivateEdit = false;
             }
-            else if (args.Key == bindedActivationButton)
+            else if (args.Key == bindedActivationButton && isMapLoaded)
             {
                 botActivated = !botActivated;
                 IsBotActiveLabel.Content = "Bot Active: " + (botActivated ? "true" : "false");
@@ -155,7 +159,6 @@ namespace ITABOsu
             // Validate check for osu songs folder
             if (System.IO.Directory.Exists(folderBrowser.SelectedPath + "\\Songs"))
             {
-                mainTABOsuCore.SetOsuPathWrapper(folderBrowser.SelectedPath);
                 pathLabel.Text = folderBrowser.SelectedPath;
                 ListDirectory(SongViewer, folderBrowser.SelectedPath + "\\Songs");
             }
@@ -169,7 +172,21 @@ namespace ITABOsu
                 bool result = mainTABOsuCore.LoadSongWrapper(((TreeViewItem)SongViewer.SelectedValue).Tag.ToString());
                 IsMapLoadedLabel.Content = "Map Loaded: " + (result ? "true" : "false");
                 IsMapLoadedLabel.Foreground = result ? Brushes.Green : Brushes.Red;
+                IsBotActiveLabel.Foreground = Brushes.Red;
+                isMapLoaded = true;
             }
+        }
+
+        private void BotHitAccuracy_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            BotHitAccuracyLabel.Text = "Hit accuracy " + Math.Round(BotHitAccuracy.Value).ToString() + "%";
+            mainTABOsuCore.SetHitAccuracyWrapper(BotHitAccuracy.Value);
+        }
+
+        private void BotAimAccuracy_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            BotAimAccuracyLabel.Text = "Aim accuracy " + Math.Round(BotAimAccuracy.Value).ToString() + "%";
+            mainTABOsuCore.SetHitAccuracyWrapper(BotHitAccuracy.Value);
         }
 
         private void BotRelaxButton_Checked(object sender, RoutedEventArgs e)
@@ -185,6 +202,18 @@ namespace ITABOsu
         private void BotSpinAutomatic_Checked(object sender, RoutedEventArgs e)
         {
             mainTABOsuCore.SetAutoSpinWrapper((bool)BotAimButton.IsChecked);
+        }
+
+        private void BotCursorDanceCheckbox_Checked(object sender, RoutedEventArgs e)
+        {
+            BotRelaxButton.IsEnabled = !(bool)BotCursorDanceCheckbox.IsChecked;
+            BotAimButton.IsEnabled = !(bool)BotCursorDanceCheckbox.IsChecked;
+            HardButton.IsEnabled = !(bool)BotCursorDanceCheckbox.IsChecked;
+            BotSpinAutomatic.IsEnabled = !(bool)BotCursorDanceCheckbox.IsChecked;
+            BotHitAccuracy.IsEnabled = !(bool)BotCursorDanceCheckbox.IsChecked;
+            BotAimAccuracy.IsEnabled = !(bool)BotCursorDanceCheckbox.IsChecked;
+
+            mainTABOsuCore.SetCursorDanceMode((bool)BotCursorDanceCheckbox.IsChecked);
         }
     }
 }

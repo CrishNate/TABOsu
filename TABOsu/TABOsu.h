@@ -27,11 +27,13 @@ public:
 	void StartBot();
 	void StopBot();
 
+	void SetCursorDance(bool cursorDance);
 	void SetAutoHit(bool autoHit);
 	void SetAutoAim(bool autoAim);
 	void SetAutoSpin(bool autoSpin);
+	void SetAimAccuracy(float aimAccuracy);
+	void SetHitAccuracy(float hitAccuracy);
 
-	void SetOsuPath(const std::wstring& path);
 	bool LoadSong(const std::wstring& path);
 
 private:

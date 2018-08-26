@@ -19,9 +19,11 @@ Class Bridge.TABOsuBridge: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     SetupOsuInfoWrapper(): PrivateScope, Public, HideBySig
     StartBotWrapper(): PrivateScope, Public, HideBySig
     StopBotWrapper(): PrivateScope, Public, HideBySig
+    SetCursorDanceMode(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
     SetAutoHitWrapper(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
     SetAutoAimWrapper(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
     SetAutoSpinWrapper(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
-    SetOsuPathWrapper(String): PrivateScope, Public, HideBySig
+    SetAimAccuracyWrapper(Double): PrivateScope, Public, HideBySig
+    SetHitAccuracyWrapper(Double): PrivateScope, Public, HideBySig
     LoadSongWrapper(String): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig

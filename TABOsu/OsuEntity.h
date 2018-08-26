@@ -28,6 +28,7 @@ public:
 		, m_EndTime(endTime)
 	{ }
 
+	virtual Vector2D GetPosition(time_t tick) { return Vector2D(); }
 	virtual OsuEntityType GetType() { return OsuEntityType::OET_None; }
 
 	int32_t GetStartTime() { return m_StartTime; }
